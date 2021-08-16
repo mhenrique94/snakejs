@@ -59,7 +59,15 @@ function iniciarJogo(){
     if(direction == "up") cobrinhaY -= box;
     if(direction == "down") cobrinhaY += box;
 
+    if(cobrinhaX != food.x || cobrinhaY != food.y){
+
     cobrinha.pop(); //retira o último elemento do array
+
+    }
+    else{
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box
+    }
 
     let newHead = {
         x: cobrinhaX,
