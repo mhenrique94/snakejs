@@ -1,0 +1,25 @@
+body{
+    /* height: 95vh;
+    width: 95vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+    font-style: normal;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: bolder;
+
+}
+
+input{
+    background-color: greenyellow;
+    width: 200px;
+    height: 50px;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h1{
+    color: honeydew;
+}
