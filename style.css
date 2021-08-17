@@ -1,14 +1,20 @@
 body{
+    background-color: green;
+    font-style: normal;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: bolder;
+
+
+}
+
+.corpo{
     /* height: 95vh;
     width: 95vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: green;
-    font-style: normal;
-    font-family: 'Lucida Sans Unicode';
-    font-weight: bolder;
+    
 
 }
 
@@ -23,3 +29,57 @@ input{
 h1{
     color: honeydew;
 }
+
+.iniciar{
+    /* Obrigado/thanks CodingNepal!
+    https://www.codingnepalweb.com/cool-glowing-effect-on-buttons-html-css/ */
+
+    position: relative;
+    height: 50px;
+    width: 200px;
+    background: greenyellow;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-bottom: 10px;
+  }
+  .iniciar:first-child:hover{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+  }
+  .iniciar:last-child:hover{
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+  }
+  .iniciar:first-child:before,
+  .iniciar:last-child:before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .iniciar:first-child:hover:before,
+  .iniciar:last-child:hover:before{
+    opacity: 1;
+    z-index: -1;
+  }
+  .iniciar:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+  }
+  @keyframes glow {
+    0%{
+      background-position: 0%;
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+

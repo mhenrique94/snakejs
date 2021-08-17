@@ -85,7 +85,7 @@ function iniciarJogo(){
     }
 }
 
-let jogo = setInterval(iniciarJogo, 100);
+// let jogo = setInterval(iniciarJogo, 100);
 
 function reloadPage(){
     location.reload();
@@ -93,6 +93,8 @@ function reloadPage(){
 }
 
 //tentar adicionar botão para iniciar jogo
-document.getElementById("iniciar").onclick ;
+function chamarJogo(){
+    let jogo = setInterval(iniciarJogo, 100);
+}
 
 document.getElementById("recarreagar").onclick = reloadPage;

@@ -10,11 +10,21 @@
     <title>JOGO DA COBRINHA</title>
 </head>
 <body>
-    <h1>JOGO DA COBRINHA</h1>
-    <div class="botoes">
-        <!-- <input type="button" id="iniciar" value="Iniciar" onclick="iniciarJogo()"></div> -->
-        <input type="button" id="recarregar" value="Recarregar" onclick="reloadPage()"></input>
-    </div>
-    <canvas id="snake" width="512" height="512"></canvas>
+    <div class="corpo">
+        <h1>JOGO DA COBRINHA</h1>
+        
+        <div class="message">
+            
+            <div class="botoes">
+                <input type="button" class="iniciar" value="Iniciar" onclick="chamarJogo()">
+                <input type="button" id="recarregar" value="Recarregar" onclick="reloadPage()"></input>
+            </div>
+        </div>
+        <canvas id="snake" width="512" height="512"></canvas>
+    </div>      
+
+    
 </body>
+
+
 </html>
