@@ -1,10 +1,21 @@
+*{
+  color: whitesmoke;
+  font-family: Helvetica;
+  
+}
+
 body{
-    background-color: green;
-    font-style: normal;
-    font-family: 'Lucida Sans Unicode';
-    font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(17, 17, 16);
+  min-height: 98vh;
+}
 
 
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .corpo{
@@ -24,6 +35,7 @@ input{
     height: 50px;
     font-size: 36px;
     margin-bottom: 10px;
+    color: black;
 }
 
 h1{
@@ -83,3 +95,43 @@ h1{
     }
   }
 
+nav{
+    
+    height: 70px;
+    width: 100%;
+    top: 0;
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-direction: left;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10%;
+}
+
+nav a{
+    padding-left: 30px;
+    font-family: helvetica;
+    text-decoration: none;
+}
+
+topcontainer{
+    display: flex;
+    flex-direction: left;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    right: 0;
+    background-color: rgb(29, 28, 28);
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+footer{
+    font-size: 11px;
+    margin-top: auto;
+}

@@ -79,8 +79,9 @@ function iniciarJogo(){
 
     for(i = 1; i < cobrinha.length; i++){
         if(cobrinha[0].x == cobrinha[i].x && cobrinha[0].y == cobrinha[i].y){
-            clearInterval(jogo);
-            alert('Game Over! Pressione OK e recarregue a página.')
+            // clearInterval(jogo);
+            alert('Game Over! Pressione OK.')
+            reloadPage();
         }
     }
 }
@@ -96,5 +97,3 @@ function reloadPage(){
 function chamarJogo(){
     let jogo = setInterval(iniciarJogo, 100);
 }
-
-document.getElementById("recarreagar").onclick = reloadPage;

@@ -10,21 +10,38 @@
     <title>JOGO DA COBRINHA</title>
 </head>
 <body>
-    <div class="corpo">
-        <h1>JOGO DA COBRINHA</h1>
+    
+    <topcontainer class="header" id="myHeader">
+        <img class="logo" src="https://github.com/mhenrique94/mhenrique94.github.io/raw/main/img/logo_bold_white.png">
+        <nav >
+          
+          <a href="https://mhenrique94.github.io/">INÍCIO</a>
+          <a href="https://github.com/mhenrique94?tab=repositories">PORTFOLIO</a>
         
-        <div class="message">
-            
-            <div class="botoes">
-                <input type="button" class="iniciar" value="Iniciar" onclick="chamarJogo()">
-                <input type="button" id="recarregar" value="Recarregar" onclick="reloadPage()"></input>
+        </nav>
+        </topcontainer>
+      
+        <div class="wrapper">
+            <div class="mainbar">
+                <div class="corpo">
+                    <h1>JOGO DA COBRINHA</h1>
+                    
+                    <div class="message">
+                        
+                        <div class="botoes">
+                            <input type="button" class="iniciar" value="Iniciar" onclick="chamarJogo()">
+                            <input type="button" id="recarregar" value="Recarregar" onclick="reloadPage()"></input>
+                        </div>
+                    </div>
+                    <canvas id="snake" width="512" height="512"></canvas>
+                </div>  
             </div>
         </div>
-        <canvas id="snake" width="512" height="512"></canvas>
-    </div>      
 
     
 </body>
 
-
+<footer>
+    Criado por Marcelo Silva. 2021.
+</footer>
 </html>
