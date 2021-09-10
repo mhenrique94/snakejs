@@ -3,27 +3,27 @@ let context = canvas.getContext("2d");
 let box = 32;
 let cobrinha = [];
 
-let direction = "right";
+let direction = "up";
 let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
 
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 cobrinha[0] = {
-    x: 8 * box,
-    y: 8 * box
+    x: 16 * box,
+    y: 16 * box
 }
 
 function criarBG(){
     context.fillStyle = "lightblue";
-    context.fillRect(0,0, 16 * box, 16 * box);
+    context.fillRect(0,0, 32 * box, 32 * box);
 
 }
 
 function criarCobrinha(){
     for(i=0; i < cobrinha.length; i++){
         context.fillStyle = "green";
-        context.fillRect(cobrinha[i].x, cobrinha[i].y, box, box);
+        context.fillRect(cobrinha[i].x, cobrinha[i].y, 31.5, 31.5);
     }
 }
 
@@ -43,10 +43,10 @@ function update (event){
 function iniciarJogo(){
 
     
-    if(cobrinha[0].x > 15 * box && direction == "right") cobrinha[0].x = 0;
-    if(cobrinha[0].x < 0 && direction == "left") cobrinha[0].x = 16 *box;
-    if(cobrinha[0].y > 15 * box && direction == "down") cobrinha[0].y = 0;
-    if(cobrinha[0].y < 0 && direction =="up") cobrinha[0].y = 16 * box;
+    if(cobrinha[0].x >= 16 * box && direction == "right") cobrinha[0].x = 0;
+    if(cobrinha[0].x < 0 && direction == "left") cobrinha[0].x = 16 * box;
+    if(cobrinha[0].y >= 16 * box && direction == "down") cobrinha[0].y = 0;
+    if(cobrinha[0].y < 1 && direction =="up") cobrinha[0].y = 16 * box;
     
     criarBG();
     criarCobrinha();
@@ -61,13 +61,14 @@ function iniciarJogo(){
     if(direction == "down") cobrinhaY += box;
 
     if(cobrinhaX != food.x || cobrinhaY != food.y){
-
-    cobrinha.pop(); //retira o último elemento do array
+        cobrinha.pop(); //retira o último elemento do array
 
     }
     else{
         food.x = Math.floor(Math.random() * 15 + 1) * box;
-        food.y = Math.floor(Math.random() * 15 + 1) * box
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+        console.log("Delicia de maça!");
+        
     }
 
     let newHead = {
@@ -80,8 +81,11 @@ function iniciarJogo(){
     for(i = 1; i < cobrinha.length; i++){
         if(cobrinha[0].x == cobrinha[i].x && cobrinha[0].y == cobrinha[i].y){
             // clearInterval(jogo);
-            alert('Game Over! Pressione OK.')
-            reloadPage();
+            // alert('Game Over! Pressione OK.')
+            // reloadPage();
+            cobrinha.pop();
+            cobrinha.pop();
+            cobrinha.pop();
         }
     }
 }
@@ -95,5 +99,5 @@ function reloadPage(){
 
 //tentar adicionar botão para iniciar jogo
 function chamarJogo(){
-    let jogo = setInterval(iniciarJogo, 100);
+    let jogo = setInterval(iniciarJogo, 130);
 }
